@@ -1,0 +1,11 @@
+def cumulative_sum_iterative(n):
+    # Initialize the result to 0
+    result = 0
+    # Add each number from 1 to n to the result
+    for i in range(1, n + 1):
+        result += i
+    return result
+
+# Example usage
+n = int(input("Enter a number: "))
+print(f"The cumulative sum up to {n} is {cumulative_sum_iterative(n)}")
