@@ -1,0 +1,11 @@
+def cumulative_sum_recursive(n):
+    # Base case: if n is 0, return 0
+    if n == 0:
+        return 0
+    # Recursive case: n + cumulative sum of (n-1)
+    else:
+        return n + cumulative_sum_recursive(n - 1)
+
+# Example usage
+n = 6
+print(f"The cumulative sum up to {n} is {cumulative_sum_recursive(n)}")
