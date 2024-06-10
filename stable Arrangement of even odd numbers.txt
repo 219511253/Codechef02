@@ -1,0 +1,13 @@
+def stable_arrange(arr):
+    i=0
+    j=0
+    while i<len(arr):
+        if arr[i]%2==0:
+            x=arr.pop(i)
+            arr.insert(j,x)
+            j=j+1
+        i=i+1
+    print(arr)
+arr=[5,7,6,8,9,12,4,36,7]
+print('original:',arr)
+stable_arrange (arr)
