@@ -1,0 +1,19 @@
+# by sorting and greedy approach
+def profit(itm):
+    return itm[2]
+def maxTip (n,x,y,arr,brr):
+    orders=[(arr[i],brr[i],abs(arr[i]-brr[i])) for i in range(n)]
+    orders.sort(key=profit,reverse=True)
+    a=0
+    b=0
+    max_profit=0
+    for rec in orders:
+        if(rec[0]>=rec[1] and a<x)or b>y:
+           max_profit +=rec[0]
+           a=a+1
+        else:
+            max_profit+=rec[1]
+            b=b+1
+    return max_profit
+print(maxTip(5,3,3,[1,2,3,4,5],[5,4,3,2,1]))
+print(maxTip(8,4,4,[1,4,3,2,7,5,9,6],[1,2,3,6,5,4,9,8]))
