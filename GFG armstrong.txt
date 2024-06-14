@@ -1,0 +1,9 @@
+class solution:
+    def armstrongNumber(self,n):
+        u=n%10
+        t=(n//10)%10
+        h=n//100
+        if u**3+t**3+h**3==n:
+            return "Yes"
+        else:
+            return "No"
